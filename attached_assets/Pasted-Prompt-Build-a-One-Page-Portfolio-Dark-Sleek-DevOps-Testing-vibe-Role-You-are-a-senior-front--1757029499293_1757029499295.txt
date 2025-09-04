@@ -1,0 +1,233 @@
+Prompt: Build a One-Page Portfolio (Dark, Sleek, DevOps/Testing vibe)
+
+Role: You are a senior front-end engineer.
+Goal: Build a modern, single-page personal portfolio website using vanilla JavaScript, HTML, and CSS (no heavy frameworks). The site must feel premium, dark-mode (but not pitch black), with a bluish theme, soft shadows, and smooth micro-interactions. I will attach my resume—parse its content and use it to populate the site.
+
+Inputs
+
+resume.pdf (attached): Parse and map content into sections below. If any field is missing, use tasteful placeholders and clearly mark them in comments.
+
+Deliverables (repo files)
+
+index.html — semantic, accessible markup
+
+assets/ — icons, minimal SVGs, headshot placeholder (if resume has one, use it), favicon
+
+src/styles.css — CSS with variables & comments
+
+src/main.js — vanilla JS for interactivity; heavily commented
+
+src/data.json — structured content extracted from the resume (experience, education, projects, certifications, hobbies); site reads from here
+
+README.md — how to edit content, customize theme, run locally, and deploy (including a Docker & K8s section)
+
+package.json — pinned versions (use "serve": "14.2.1" or similar for static hosting); include "engines": { "node": ">=20.0.0" }
+
+Dockerfile — production-ready static serve (Node 20 Alpine) with pinned tool versions
+
+.dockerignore — node_modules, logs, etc.
+
+(Optional but preferred)
+
+k8s/deployment.yaml and k8s/service.yaml — simple example manifests with placeholders for image, namespace, replicas, resource requests/limits, readiness/liveness probes on the static server port.
+
+Visual & UX Requirements
+
+Theme: Dark bluish palette; not pure black. Use CSS variables:
+
+--bg: #0b1220;
+
+--surface: #0f172a;
+
+--text: #e5e7eb;
+
+--muted: #94a3b8;
+
+--accent: #60a5fa; (primary)
+
+--accent-2: #22d3ee; (secondary)
+
+Style: Clean, spacious, with soft shadows and subtle glassmorphism:
+
+Shadows (example): 0 10px 30px rgba(0,0,0,0.35)
+
+Rounded corners, slightly translucent section cards.
+
+Typography: System fonts or Google Fonts Inter with fallbacks; ensure high contrast and accessible sizes.
+
+Icons: Inline SVGs only (no external icon libs). Include DevOps/Testing icons (Docker, Kubernetes, Jenkins, Terraform, AWS/GCP, Selenium, Postman/Bruno) as small monochrome SVGs.
+
+Animations: Subtle only. Use prefers-reduced-motion to disable. Add smooth scrolling and section fade-in via IntersectionObserver.
+
+Responsiveness: Mobile-first. Looks great from 320px to ultrawide.
+
+Accessibility: Landmark roles, alt text, focus styles, trap focus for any overlays, aria-labels where needed. Target Lighthouse accessibility ≥ 95.
+
+Information Architecture (Single Page)
+
+Sticky header with links that smooth-scroll & highlight (scrollspy):
+
+About
+
+Experience
+
+Education
+
+Projects
+
+Certifications
+
+Hobbies
+
+Contact / CTA
+
+Sections:
+
+Hero / About
+
+Name, title, short value prop that reflects DevOps & Testing emphasis.
+
+Buttons: “Download Résumé” (PDF), “Contact”.
+
+Experience (timeline cards)
+
+Role, company, dates, brief impact bullets (numbers, tools, outcomes).
+
+Badges for stack/tools (Docker, K8s, Jenkins, Terraform, AWS/GCP, Selenium, Postman/Bruno).
+
+Education
+
+Degree, institution, dates, key coursework/certs if relevant.
+
+Projects (responsive grid)
+
+Title, short description, stack badges, and optional links (GitHub/demo).
+
+Emphasize testing & reliability (mention CI/CD, coverage, monitoring if present in resume).
+
+Certifications
+
+Grid/list of certs with issuer and year (e.g., ISC2 CC, Fortinet, Security+, etc. — parse from resume).
+
+Hobbies / Interests
+
+Compact list with small icons; keep on-brand.
+
+Contact CTA
+
+Email button, LinkedIn/GitHub icons.
+
+Footer: © year, name, small “Built with vanilla JS” note.
+
+Header behavior:
+
+Shrinks on scroll, active link highlighting via scrollspy, keyboard navigable.
+
+“Back to top” floating button after first viewport.
+
+Functionality (vanilla JS in src/main.js)
+
+Smooth scroll for header links (scrollIntoView + offset handling).
+
+Scrollspy using IntersectionObserver to set active nav link.
+
+Content loader: Fetch src/data.json at startup and render sections.
+
+Reduced motion support; disable animations for users who prefer it.
+
+Hash routing support: Visiting /#projects jumps to the section.
+
+Data Model (src/data.json)
+
+Design a clear schema:
+
+{
+  "about": { "name": "", "title": "", "summary": "", "location": "", "email": "", "links": { "github": "", "linkedin": "" } },
+  "experience": [ { "role": "", "company": "", "start": "", "end": "", "location": "", "highlights": [], "stack": ["Docker","Kubernetes","Jenkins"] } ],
+  "education": [ { "degree": "", "school": "", "start": "", "end": "", "notes": [] } ],
+  "projects": [ { "name": "", "description": "", "stack": [], "links": { "github": "", "demo": "" } } ],
+  "certifications": [ { "name": "", "issuer": "", "year": "" } ],
+  "hobbies": [ "Item1", "Item2" ]
+}
+
+
+Parse my attached resume to populate this file. If parsing fails for any field, add TODO placeholders and comments showing where to edit.
+
+Code Quality & Comments
+
+Heavily comment HTML/CSS/JS so I can easily refactor.
+
+Use semantic HTML (header/main/section/nav/footer, h1–h3 structure).
+
+CSS organized with variables + component blocks; explain how to tweak theme (colors, spacing, shadows).
+
+JS split into small functions (renderers per section), each with JSDoc comments.
+
+Performance & SEO
+
+Lighthouse ≥ 95 for Performance/Accessibility/Best Practices/SEO.
+
+Meta tags (title/description), Open Graph/Twitter tags, favicon.
+
+Defer JS, minimize DOM thrash, no external blocking assets besides fonts.
+
+No external framework (keep bundle tiny).
+
+Docker & K8s (with pinned versions)
+
+Dockerfile (production):
+
+Base: node:20-alpine
+
+Install serve@14.2.1 (or similar pinned)
+
+Expose port 3000; CMD npx serve -s . -l 3000
+
+README:
+
+docker build -t <your-image>:v1 .
+
+docker run -p 3000:3000 <your-image>:v1
+
+K8s (optional examples):
+
+k8s/deployment.yaml (Deployment with replicas: 2, resource requests/limits, readiness/liveness on /: 200)
+
+k8s/service.yaml (ClusterIP on port 80 → 3000)
+
+Clearly mark placeholders (<IMAGE>, <NAMESPACE>).
+
+Mention how to set imagePullPolicy, rollout strategy, and basic kubectl commands.
+
+README.md Must Explain
+
+How content is organized and how to edit src/data.json.
+
+How to change theme colors in src/styles.css.
+
+How to add/edit sections, projects, badges, and icons.
+
+Local dev steps: npm i, npx serve -s . -l 3000 (or equivalent).
+
+Docker build/run steps; sample K8s deploy steps.
+
+Accessibility checklist and how to validate Lighthouse.
+
+File tree overview.
+
+Acceptance Criteria
+
+Single-page site with sticky header and smooth scrolling; links jump to sections.
+
+Dark bluish theme, soft shadows, sleek, premium feel.
+
+Resume content successfully parsed into src/data.json and rendered.
+
+No external JS frameworks; only vanilla JS + CSS.
+
+Pinned versions in package.json and Dockerfile.
+
+Clear comments throughout and a thorough README.
+
+Generate the full codebase now with all files above.
+If anything is ambiguous, choose sensible defaults and document them in comments and the README.
