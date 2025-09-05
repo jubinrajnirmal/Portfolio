@@ -340,6 +340,12 @@ p {
   gap: var(--spacing-1);
 }
 
+@media (min-width: 768px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+
 .nav-link-mobile {
   color: var(--muted);
   text-decoration: none;
