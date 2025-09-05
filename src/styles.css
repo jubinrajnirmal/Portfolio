@@ -488,7 +488,7 @@ p {
 
 @media (max-width: 767px) {
   .hero-section {
-    padding-top: var(--spacing-16);
+    padding-top: calc(var(--spacing-20) + var(--spacing-8));
     padding-left: var(--spacing-4);
     padding-right: var(--spacing-4);
     min-height: calc(100vh - 64px);
