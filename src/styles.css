@@ -509,6 +509,18 @@ p {
     0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
+.avatar-logo {
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.4));
+  transition: all var(--transition-fast);
+}
+
+.avatar-logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 30px rgba(96, 165, 250, 0.6));
+}
+
 .avatar-initials {
   font-size: var(--font-size-4xl);
   font-weight: 700;
