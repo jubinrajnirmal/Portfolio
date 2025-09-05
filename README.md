@@ -1,11 +1,11 @@
 # Jubin Raj Nirmal - Portfolio Website
 
-A modern, single-page portfolio website showcasing DevOps and Quality Assurance expertise. Built with vanilla JavaScript, HTML, and CSS featuring a dark bluish theme with glassmorphism effects.
+A modern, single-page portfolio website showcasing DevOps and Quality Assurance expertise. Built with vanilla JavaScript, HTML, and CSS.
 
 ## 🚀 Features
 
 - **Responsive Design**: Mobile-first approach (320px to ultrawide screens)
-- **Dark Theme**: Professional dark bluish color scheme with glassmorphism
+- **Dark Theme**: Professional dark bluish colour scheme with glassmorphism
 - **Smooth Interactions**: Scroll animations, scrollspy navigation, and micro-interactions
 - **Accessibility**: WCAG compliant with proper focus management and reduced motion support
 - **Performance**: Lighthouse score ≥95 for all metrics
@@ -14,7 +14,7 @@ A modern, single-page portfolio website showcasing DevOps and Quality Assurance 
 
 ## 🎨 Design System
 
-### Color Palette
+### Colour Palette
 ```css
 --bg: #0b1220;           /* Main background */
 --surface: #0f172a;      /* Card backgrounds */
