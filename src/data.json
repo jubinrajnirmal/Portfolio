@@ -1,0 +1,170 @@
+{
+  "about": {
+    "name": "Jubin Raj Nirmal",
+    "title": "Software Engineer & QA Developer",
+    "summary": "Detail-oriented software engineer with a Master's in Information Security, currently expanding focus in Quality Assurance and Testing. With a strong foundation in IT operations and systems administration, applies analytical problem solving, process awareness, and a security-focused mindset to QA projects. Currently upskilling in manual testing and pursuing ISTQB certification.",
+    "location": "Canada",
+    "email": "jubin.raj.nirmal@email.com",
+    "links": {
+      "github": "https://github.com/jubinrajnirmal",
+      "linkedin": "https://linkedin.com/in/jubinrajnirmal"
+    }
+  },
+  "experience": [
+    {
+      "role": "Software Engineering | QA",
+      "company": "FDM Skills Lab",
+      "start": "Jul 2025",
+      "end": "Current",
+      "location": "Canada",
+      "highlights": [
+        "Applied ISTQB standard testing concepts to create artifacts including test plans, test cases, defect reports and test closure documents",
+        "Practiced structured manual testing approaches aligned with project quality goals",
+        "Built test automation frameworks using Java, Selenium, and Cucumber (BDD/TDD) with Page Object Model design",
+        "Managed regression testing using Jenkins and Github and validated APIs using Postman and RestAssured to support CI/CD pipeline integration"
+      ],
+      "stack": ["Java", "Selenium", "Cucumber", "Jenkins", "Postman", "RestAssured", "ISTQB"]
+    },
+    {
+      "role": "IT Operations",
+      "company": "FDM Skills Lab",
+      "start": "Mar 2025",
+      "end": "Current",
+      "location": "Canada",
+      "highlights": [
+        "Utilized Agile methodologies (Scrum and Kanban) and IT Service Management practices in ServiceNow",
+        "Administered Unix/Linux systems using commands and shell scripting to automate tasks",
+        "Used Python scripting for automation and to interface with AI through API calls to LLMs like GPT",
+        "Managed Active Directory accounts and automated policy enforcement using PowerShell and Group Policy Objects",
+        "Provisioned and managed Azure compute, storage, and network resources with built-in monitoring and logging",
+        "Utilized Terraform for cloud-agnostic infrastructure as code (IaC) automation with Docker containerization",
+        "Automated CI/CD pipelines with Jenkins and optimized Kubernetes deployments with RBAC and Nginx Ingress Controller"
+      ],
+      "stack": ["Azure", "Docker", "Terraform", "Kubernetes", "Jenkins", "Python", "Linux", "ServiceNow"]
+    },
+    {
+      "role": "Financial Care Representative",
+      "company": "Alorica, Canada",
+      "start": "Nov 2024",
+      "end": "Feb 2025",
+      "location": "Canada",
+      "highlights": [
+        "Managed payments, account queries, and disputes while ensuring compliance",
+        "Achieved 100% customer satisfaction by resolving issues efficiently using Genesys Cloud and Salesforce CRM",
+        "Ensured compliance with call protocols and collaborated across teams to resolve fraud and account-related concerns"
+      ],
+      "stack": ["Salesforce", "Genesys Cloud", "Customer Service", "Compliance"]
+    },
+    {
+      "role": "Cybersecurity Intern",
+      "company": "Vosyn AI, Canada",
+      "start": "Sep 2024",
+      "end": "Dec 2024",
+      "location": "Canada",
+      "highlights": [
+        "Led SOC compliance by developing policies, performing gap analysis, and implementing security controls and logging",
+        "Enforced SOC 1 and SOC 2 policies and developed a centralized RBAC logging system to strengthen compliance",
+        "Streamlined incident response by co-developing remediation playbooks and managing collaboration through the Notion platform"
+      ],
+      "stack": ["SOC Compliance", "RBAC", "Security Controls", "Incident Response", "Notion"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Engineering",
+      "field": "Information Systems Security",
+      "school": "Concordia University, Canada",
+      "start": "Jan 2023",
+      "end": "Sep 2024",
+      "notes": [
+        "Network Security and Architecture",
+        "Cybercrime Investigations",
+        "Malware Defence and Application Security",
+        "Software Quality Assurance"
+      ]
+    },
+    {
+      "degree": "Bachelor of Technology",
+      "field": "Computer Science and Engineering",
+      "school": "SRM Institute of Science and Technology, India",
+      "start": "Jul 2018",
+      "end": "Jun 2022",
+      "notes": [
+        "Computer Architecture and Automata",
+        "Software Development Lifecycle",
+        "Programming and Debugging",
+        "Computer Networking"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Test Automation Framework",
+      "description": "Comprehensive automation framework using Java, Selenium, and Cucumber with BDD/TDD practices. Integrated with Jenkins for CI/CD pipeline automation and Page Object Model design for maintainable test scripts.",
+      "stack": ["Java", "Selenium", "Cucumber", "Jenkins", "Page Object Model", "BDD/TDD"],
+      "links": {
+        "github": "#",
+        "demo": "#"
+      }
+    },
+    {
+      "name": "Infrastructure as Code Platform",
+      "description": "Cloud-agnostic infrastructure automation using Terraform with state management, modules, and dynamic blocks. Leveraged Docker for containerization and Kubernetes for orchestration with RBAC implementation.",
+      "stack": ["Terraform", "Docker", "Kubernetes", "Azure", "Infrastructure as Code"],
+      "links": {
+        "github": "#",
+        "demo": ""
+      }
+    },
+    {
+      "name": "SOC Compliance System",
+      "description": "Centralized RBAC logging system for SOC 1 and SOC 2 compliance with incident response playbooks and automated gap analysis. Enhanced audit readiness and streamlined security operations.",
+      "stack": ["SOC Compliance", "RBAC", "Logging", "Security Controls", "Audit"],
+      "links": {
+        "github": "#",
+        "demo": ""
+      }
+    }
+  ],
+  "certifications": [
+    {
+      "name": "CompTIA Security+",
+      "issuer": "CompTIA",
+      "year": "Aug 2024"
+    },
+    {
+      "name": "(ISC)² Certified in Cybersecurity",
+      "issuer": "(ISC)²",
+      "year": "May 2024"
+    },
+    {
+      "name": "Azure Fundamentals",
+      "issuer": "Microsoft",
+      "year": "Jul 2024"
+    },
+    {
+      "name": "Fortinet Certified Associate Cybersecurity",
+      "issuer": "Fortinet",
+      "year": "Mar 2024"
+    },
+    {
+      "name": "Deploy and Configure Azure",
+      "issuer": "Microsoft Applied Skills",
+      "year": "May 2025"
+    },
+    {
+      "name": "Migrate SQL workloads to Azure SQL Database",
+      "issuer": "Microsoft Applied Skills",
+      "year": "May 2025"
+    }
+  ],
+  "hobbies": [
+    "DevOps Best Practices",
+    "Cybersecurity Research",
+    "Cloud Architecture",
+    "Test Automation",
+    "Continuous Learning",
+    "Technology Blogs",
+    "Open Source Contributions"
+  ]
+}

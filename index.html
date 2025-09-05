@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    
+    <!-- SEO Meta Tags -->
+    <title>Jubin Raj Nirmal - Software Engineer & QA Developer | DevOps Testing Expert</title>
+    <meta name="description" content="Experienced Software Engineer & QA Developer specializing in DevOps, Testing, and Information Security. ISTQB certified with expertise in Java, Python, Docker, Kubernetes, and CI/CD pipelines.">
+    <meta name="keywords" content="Software Engineer, QA Developer, DevOps, Testing, ISTQB, Java, Python, Automation, Docker, Kubernetes, Jenkins, Terraform">
+    <meta name="author" content="Jubin Raj Nirmal">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Jubin Raj Nirmal - Software Engineer & QA Developer">
+    <meta property="og:description" content="Experienced in Quality Assurance, DevOps practices, and Information Security with ISTQB certification">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jubin Raj Nirmal - Software Engineer & QA Developer">
+    <meta name="twitter:description" content="Experienced in Quality Assurance, DevOps practices, and Information Security">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <!-- Sticky Navigation Header -->
+    <header id="header" class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <div class="nav-wrapper">
+                <div class="nav-brand">
+                    <span class="brand-text">JRN</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop" id="nav-desktop">
+                    <a href="#about" class="nav-link" data-testid="nav-about">About</a>
+                    <a href="#experience" class="nav-link" data-testid="nav-experience">Experience</a>
+                    <a href="#education" class="nav-link" data-testid="nav-education">Education</a>
+                    <a href="#projects" class="nav-link" data-testid="nav-projects">Projects</a>
+                    <a href="#certifications" class="nav-link" data-testid="nav-certifications">Certifications</a>
+                    <a href="#hobbies" class="nav-link" data-testid="nav-hobbies">Interests</a>
+                    <a href="#contact" class="nav-link" data-testid="nav-contact">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu" data-testid="button-mobile-menu">
+                    <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="nav-mobile hidden" id="nav-mobile" role="menu">
+                <a href="#about" class="nav-link-mobile" role="menuitem" data-testid="nav-mobile-about">About</a>
+                <a href="#experience" class="nav-link-mobile" role="menuitem" data-testid="nav-mobile-experience">Experience</a>
+                <a href="#education" class="nav-link-mobile" role="menuitem" data-testid="nav-mobile-education">Education</a>
+                <a href="#projects" class="nav-link-mobile" role="menuitem" data-testid="nav-mobile-projects">Projects</a>
+                <a href="#certifications" class="nav-link-mobile" role="menuitem" data-testid="nav-mobile-certifications">Certifications</a>
+                <a href="#hobbies" class="nav-link-mobile" role="menuitem" data-testid="nav-mobile-hobbies">Interests</a>
+                <a href="#contact" class="nav-link-mobile" role="menuitem" data-testid="nav-mobile-contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- Hero/About Section -->
+        <section id="about" class="section hero-section" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <div class="hero-avatar">
+                        <div class="avatar-placeholder" data-testid="img-avatar">
+                            <span class="avatar-initials">JRN</span>
+                        </div>
+                    </div>
+                    <h1 id="hero-heading" class="hero-title" data-testid="text-hero-title">
+                        <span class="name-first" data-testid="text-name">Loading...</span>
+                        <span class="name-last accent-text" data-testid="text-surname">Loading...</span>
+                    </h1>
+                    <h2 class="hero-subtitle" data-testid="text-title">Loading...</h2>
+                    <p class="hero-description" data-testid="text-summary">Loading...</p>
+                    
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" id="download-resume-btn" data-testid="button-download-resume">
+                            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Download Resume
+                        </button>
+                        <button class="btn btn-secondary" id="contact-btn" data-testid="button-contact">
+                            Contact Me
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section" aria-labelledby="experience-heading">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 id="experience-heading" class="section-title" data-testid="text-section-experience">
+                        Professional <span class="accent-text">Experience</span>
+                    </h2>
+                </div>
+                
+                <div class="timeline" id="experience-timeline" data-testid="container-experience">
+                    <!-- Experience items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section section-alt" aria-labelledby="education-heading">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 id="education-heading" class="section-title" data-testid="text-section-education">
+                        <span class="accent-text">Education</span>
+                    </h2>
+                </div>
+                
+                <div class="education-grid" id="education-grid" data-testid="container-education">
+                    <!-- Education items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section" aria-labelledby="projects-heading">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 id="projects-heading" class="section-title" data-testid="text-section-projects">
+                        Featured <span class="accent-text">Projects</span>
+                    </h2>
+                </div>
+                
+                <div class="projects-grid" id="projects-grid" data-testid="container-projects">
+                    <!-- Project items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section section-alt" aria-labelledby="certifications-heading">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 id="certifications-heading" class="section-title" data-testid="text-section-certifications">
+                        <span class="accent-text">Certifications</span>
+                    </h2>
+                </div>
+                
+                <div class="certifications-grid" id="certifications-grid" data-testid="container-certifications">
+                    <!-- Certification items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies/Interests Section -->
+        <section id="hobbies" class="section" aria-labelledby="hobbies-heading">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 id="hobbies-heading" class="section-title" data-testid="text-section-hobbies">
+                        Personal <span class="accent-text">Interests</span>
+                    </h2>
+                </div>
+                
+                <div class="hobbies-list" id="hobbies-list" data-testid="container-hobbies">
+                    <!-- Hobbies will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="contact-content fade-in">
+                    <h2 id="contact-heading" class="section-title center" data-testid="text-section-contact">
+                        Let's <span class="accent-text">Connect</span>
+                    </h2>
+                    <p class="contact-description" data-testid="text-contact-description">
+                        I'm always interested in discussing new opportunities in Quality Assurance, 
+                        DevOps, and Cybersecurity. Let's connect and explore how we can work together.
+                    </p>
+                    
+                    <div class="contact-card">
+                        <div class="contact-methods" id="contact-methods" data-testid="container-contact-methods">
+                            <!-- Contact methods will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="contact-actions">
+                        <button class="btn btn-primary" id="email-btn" data-testid="button-email">
+                            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            Send Email
+                        </button>
+                        <button class="btn btn-secondary" id="download-resume-footer-btn" data-testid="button-download-resume-footer">
+                            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Download Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text" data-testid="text-footer">
+                    &copy; <span id="current-year">2024</span> <span id="footer-name">Jubin Raj Nirmal</span>. Built with vanilla JavaScript.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top" data-testid="button-back-to-top">
+        <svg class="back-to-top-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="src/main.js"></script>
+</body>
+</html>

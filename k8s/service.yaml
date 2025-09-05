@@ -1,0 +1,76 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: portfolio-service
+  namespace: <NAMESPACE>  # Replace with your namespace
+  labels:
+    app: portfolio
+    component: frontend
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 3000
+    protocol: TCP
+    name: http
+  selector:
+    app: portfolio
+---
+# Optional: Ingress for external access
+# Uncomment and configure based on your ingress controller
+#
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: portfolio-ingress
+#   namespace: <NAMESPACE>
+#   annotations:
+#     kubernetes.io/ingress.class: "nginx"  # or your ingress class
+#     cert-manager.io/cluster-issuer: "letsencrypt-prod"  # if using cert-manager
+#     nginx.ingress.kubernetes.io/ssl-redirect: "true"
+#     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+# spec:
+#   tls:
+#   - hosts:
+#     - your-domain.com  # Replace with your domain
+#     secretName: portfolio-tls
+#   rules:
+#   - host: your-domain.com  # Replace with your domain
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: portfolio-service
+#             port:
+#               number: 80
+---
+# Optional: HorizontalPodAutoscaler for auto-scaling
+# Uncomment if you want automatic scaling based on CPU/memory
+#
+# apiVersion: autoscaling/v2
+# kind: HorizontalPodAutoscaler
+# metadata:
+#   name: portfolio-hpa
+#   namespace: <NAMESPACE>
+# spec:
+#   scaleTargetRef:
+#     apiVersion: apps/v1
+#     kind: Deployment
+#     name: portfolio-app
+#   minReplicas: 2
+#   maxReplicas: 10
+#   metrics:
+#   - type: Resource
+#     resource:
+#       name: cpu
+#       target:
+#         type: Utilization
+#         averageUtilization: 70
+#   - type: Resource
+#     resource:
+#       name: memory
+#       target:
+#         type: Utilization
+#         averageUtilization: 80
